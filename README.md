@@ -25,4 +25,9 @@ the organisation 'boxoffice' is set in the package name in package.json
 
 - `npm publish`
 
-done!!
+done!
+
+## Resources
+
+https://docs.npmjs.com/creating-and-publishing-private-packages
+https://jasonwatmore.com/post/2018/04/14/react-npm-how-to-publish-a-react-component-to-npm
