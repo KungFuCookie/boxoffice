@@ -11,7 +11,8 @@
 
 the organisation 'boxoffice' is set in the package name in package.json
 
-````{
+```
+{
   "name": "@boxoffice/boxofficetest",
   "version": "1.0.1",
   "description": "Boxoffice Component for npm",
@@ -19,9 +20,9 @@ the organisation 'boxoffice' is set in the package name in package.json
   "license": "MIT",
   "scripts": {
   "build": "webpack"
-},```
+}
+```
 
 - `npm publish`
 
 done!!
-````
