@@ -1,16 +1,19 @@
 import React from "react";
+import classNames from "classnames";
 import PropTypes from "prop-types";
 import css from "./styles.css";
 
-const DemoPoster = ({ src }) => (
+const DemoPoster = ({ src, className, style }) => (
   <div
-    className={css.container}
-    style={{ backgroundImage: `url(${src})` }}
+    className={classNames(css.container, className)}
+    style={{ ...(style || {}), backgroundImage: `url(${src})` }}
   ></div>
 );
 
 DemoPoster.propTypes = {
   src: PropTypes.string,
+  style: PropTypes.object,
+  className: PropTypes.string,
 };
 
 export default DemoPoster;

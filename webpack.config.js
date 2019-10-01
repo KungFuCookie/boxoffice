@@ -17,6 +17,7 @@ const entries = () => {
 module.exports = {
   entry: entries(),
   output: {
+    libraryTarget: "commonjs2",
     path: path.resolve(__dirname, "packages"),
     filename: "[name].js",
   },

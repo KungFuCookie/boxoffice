@@ -1,3 +1,5 @@
-.demo {
-  background: red;
+.component {
+  background-color: #e8e8e8; /* Green */
+  border-radius: 5px;
+  padding: 5px;
 }

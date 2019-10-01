@@ -1,34 +1,52 @@
 {
   "name": "@boxoffice/shared-components",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "jest:integration": "jest -c integration/jest.config.js",
+    "test:integration": "start-server-and-test storybook http-get://localhost:9012 jest:integration",
+    "storybook": "start-storybook -p 9012",
     "build": "webpack --mode production",
     "dev": "start-storybook",
-    "storybook": "start-storybook",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest src"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.6.2",
+    "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-knobs": "^5.2.1",
     "@storybook/addon-notes": "^5.2.1",
     "@storybook/addon-viewport": "^5.2.1",
     "@storybook/react": "^5.2.1",
+    "@testing-library/react": "^9.2.0",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
     "html-loader": "^0.5.5",
+    "jest": "^24.9.0",
+    "jest-image-snapshot": "^2.11.0",
+    "jest-puppeteer": "^4.3.0",
     "markdown-loader": "^5.1.0",
+    "puppeteer": "^1.20.0",
+    "react-test-renderer": "^16.10.1",
+    "start-server-and-test": "^1.10.2",
     "style-loader": "^1.0.0",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react": "^16.10.1",
     "react-dom": "^16.10.1"
