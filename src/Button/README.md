@@ -1,13 +1,13 @@
-# Nice fucking button !
+# Nice Boxoffice button!
 
-### You have a NICE oCclick function and others methods
+### You have a NICE onClick function and other methods
 
-bla bla bla blqdofkodsijfgiodsjoi
+Some more info here
 
 ### How to use
 
 ```js
-import Button from "@boxoffice/Button";
+import Button from '@boxoffice/Button';
 
-export default () => <Button label={"i like poneys"} />;
+export default () => <Button label={'i like poneys'} />;
 ```
