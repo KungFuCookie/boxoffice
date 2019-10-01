@@ -2,15 +2,16 @@
 
 ## Build your Components
 
-`npm run build`
-this creates the ES5 compiled package compatible in every browser
+- `npm run build`
+  this creates the ES5 compiled package compatible in every browser
 
 ## Login and Publish
 
-`npm login`
+- `npm login`
 
 the organisation 'boxoffice' is set in the package name in package.json
-{
+
+````{
   "name": "@boxoffice/boxofficetest",
   "version": "1.0.1",
   "description": "Boxoffice Component for npm",
@@ -18,8 +19,9 @@ the organisation 'boxoffice' is set in the package name in package.json
   "license": "MIT",
   "scripts": {
   "build": "webpack"
-},
+},```
 
-`npm publish`
+- `npm publish`
 
 done!!
+````
