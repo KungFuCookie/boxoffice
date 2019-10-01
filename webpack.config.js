@@ -1,6 +1,25 @@
+const path = require("path");
+const { readdirSync, statSync } = require("fs");
+
+const dirs = p =>
+  readdirSync(p).filter(f => statSync(path.join(p, f)).isDirectory());
+
 const isDevelopment = true;
 
+const entries = () => {
+  const x = {};
+  dirs("./src").forEach(name => {
+    x[`${name}/index`] = `./src/${name}/index.js`;
+  });
+  return x;
+};
+
 module.exports = {
+  entry: entries(),
+  output: {
+    path: path.resolve(__dirname, "packages"),
+    filename: "[name].js",
+  },
   module: {
     rules: [
       {
@@ -10,7 +29,14 @@ module.exports = {
           loader: "babel-loader",
         },
       },
-
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: "html-loader",
+          },
+        ],
+      },
       {
         test: /\.css$/i,
         use: [
